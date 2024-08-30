@@ -1,0 +1,54 @@
+html,body,*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BAGIAN HEADER */
+header{
+    /* border: 2px solid red; */
+    width: 100%;
+    height: 60px;
+    display: flex;
+}
+/* BAGIAN HEADER */
+
+/* BAGIAN CONTENT */
+
+.image img{
+    width: 100%;
+    height: 250px;
+}
+
+.title h1,h5{
+    text-indent: 50px;
+    margin-bottom: 20px;
+    position: relative;
+    font-family: arial, sans-serif;
+    
+}
+
+.title h1{
+    font-size: 1.5rem;
+}
+
+.title h5{
+    font-size: 0.7rem;
+}
+
+.title h5::after{
+    content: ' ';
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    border: 2px solid black;
+    width: 100%;
+}
+
+.title p{
+    padding: 15px 30px;
+    text-align: justify;
+    font-size: 1rem;
+}
+
+/* BAGIAN CONTENT */

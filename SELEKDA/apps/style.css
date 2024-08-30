@@ -1,0 +1,248 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #e3dede;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 10px;
+    height: 540px;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.tools-board {
+    flex: 0 0 210px; /* Fixed width, allows space for drawing board to resize */
+    height: 110%;
+    border-radius: 20px;
+    background-color: #f8f7f6;
+    padding: 15px 22px 0;
+}
+
+.tools-board .row {
+    margin-bottom: 20px;
+}
+
+.row .options {
+    list-style: none;
+    margin: 10px 0 0 5px;
+}
+
+.row .options .option {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.option:is(:hover, .active) img {
+    filter: grayscale(20%);
+}
+
+.option :where(span, label) {
+    color: black;
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+.option:is(:hover, .active) :where(span, label) {
+    color: #f4130b;
+}
+
+.option #fill-color {
+    height: 14px;
+    cursor: pointer;
+    width: 14px;
+}
+
+#fill-color:checked~label {
+    color: #e93e2b;
+}
+
+.option #size-slider {
+    width: 100%;
+    height: 5px;
+    margin-top: 10px;
+}
+
+.colors .options {
+    display: flex;
+    justify-content: space-between;
+}
+
+.colors .option {
+    height: 20px;
+    width: 20px;
+    border-radius: 30%;
+    margin-top: 3px;
+    position: relative;
+}
+
+.colors .option:nth-child(1) {
+    background-color: #fff;
+    border: 1px solid #bfbfbf;
+}
+
+.colors .option:nth-child(2) {
+    background-color: black;
+}
+
+.colors .option:nth-child(3) {
+    background-color: #ef4415;
+}
+
+.colors .option:nth-child(4) {
+    background-color: green;
+}
+
+.colors .option:nth-child(5) {
+    background-color: #c1f40a;
+}
+
+.colors .option.selected::before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    background: inherit;
+    border-radius: inherit;
+    border: 2px solid #fff;
+    transform: translate(-50%, -50%);
+}
+
+.colors .option:first-child.selected::before {
+    border-color: #ccc;
+}
+
+.option #color-picker {
+    opacity: 0;
+    cursor: pointer;
+}
+
+.buttons button {
+    width: 80%;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+    padding: 3px 0;
+    margin-bottom: 13px;
+    background: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttons .clear-canvas {
+    color: black;
+    border: 1px solid #9fc39f;
+    transition: all 0.2s ease;
+    border: 2px solid black;
+    font-size: 13px;
+}
+
+.clear-canvas:hover {
+    color: #fff;
+    background: #6c757d;
+}
+
+.buttons .save-img {
+    background: white;
+    color: black;
+    border: 1px solid #6c757d;
+}
+
+.drawing-board {
+    flex: 1 1 0; /* Allow the canvas to take remaining space */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.drawing-board canvas {
+    width: 100%;
+    height: 100%;
+    max-height: 590px;
+    border-radius: 10px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center; /* Center elements vertically in column layout */
+        height: auto; /* Allow height to adjust based on content */
+        max-width: 95%; /* Adjust width to be responsive */
+    }
+
+    .tools-board {
+        width: 90%; /* Adjust width for mobile devices */
+        margin-bottom: 20px;
+    }
+
+    .drawing-board {
+        width: 90%; /* Adjust width for mobile devices */
+    }
+
+    .drawing-board canvas {
+        height: auto; /* Allow canvas to adjust height */
+        max-height: 300px; /* Adjust maximum height for canvas */
+    }
+}
+.page{
+    position: absolute;
+    top: 10%;
+    right: 43%;
+    height: 100px;
+    width: 70px;
+}
+
+.autor{
+    position: absolute;
+    top: 73%;
+    right: 43%;
+    height: 100px;
+    width: 70px;
+}
+
+.footer {
+    background-color: #ffffff; /* Warna latar belakang putih untuk footer */
+    padding: 100px;
+    border-top: 2px solid #ddd; /* Garis pemisah atas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo {
+    max-width: 50px; /* Ukuran maksimum logo */
+    margin-right: 15px; /* Jarak antara logo dan judul */
+}
+
+.footer-title {
+    font-size: 1.5em; /* Ukuran font untuk judul */
+    color: #000; /* Warna teks judul */
+}

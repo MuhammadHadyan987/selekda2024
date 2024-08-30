@@ -1,0 +1,117 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.title{
+    position: relative;
+    right: 30px;
+}
+
+.logo img{
+    position: absolute;
+    top: 0;
+}
+.logo span{
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    left: 40%;
+}
+.view {
+    position: absolute;
+    top: 22%;
+    left: 5%;
+}
+.kategori{
+    position: absolute;
+    top: 20%;
+    right: 37%;
+}
+.author{
+    position: relative;
+    top: 50px;
+    right: 3%;
+}
+.date{
+    position: relative;
+    top: 50px;
+    left: 45%;
+}
+.container {
+    width: 85%;
+    background-color: #ffffff;
+    padding: 50px;
+    border: 1px solid #000;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.description{
+    position: relative;
+    top: 40px;
+}
+.header .view {
+    font-size: 14px;
+}
+.header .kategori {
+    font-size: 16px;
+    font-weight: bold;
+}
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.content .item {
+    width: 18%;
+    text-align: center;
+    border: 1px solid #000;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.content .item .title {
+    font-size: 18px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+.content .item .description {
+    font-size: 14px;
+    margin-top: 10px;
+}
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.footer .author {
+    font-size: 14px;
+}
+.footer .date {
+    font-size: 14px;
+}
+.footer .comments {
+    font-size: 14px;
+    background-color: #000;
+    color: #fff;
+    padding: 5px 10px;
+    text-decoration: none;
+    position: relative;
+    top: 100px;
+}
+.footer .comments:hover {
+    background-color: #444;
+}
+
+.logo {
+    padding: 0;
+    margin: 0;
+}

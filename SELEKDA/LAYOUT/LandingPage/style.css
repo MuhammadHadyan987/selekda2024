@@ -1,0 +1,225 @@
+/* DECLARE */
+body,
+html,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--Font-primary);
+  font-family: var(--Font-weight);
+}
+/* DECLARE */
+
+/* INI VARIABLE CSS */
+:root {
+  --color-black: #000;
+  --color-gray: #3333;
+  --color-keputihan: #eaeaea;
+  --Font-primary: Arial, sans-serif;
+  --Font-weight: 650;
+}
+/* INI VARIABLE CSS */
+
+/* STYLE BAGIAN HEADER or NAV */
+nav {
+  background-color: var(--color-gray);
+  max-height: 80px;
+  width: 100%;
+  position: relative;
+}
+
+nav .logo {
+  width: 120px;
+  height: 85px;
+}
+
+nav .ulNavbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -125px;
+    margin-left: -130px;
+}
+
+nav .ulNavbar .liNavbar {
+  /* border: 2px solid green; */
+  list-style-type: none;
+  padding: 1rem;
+  margin: 3rem;
+  font-size: 1.3rem;
+  font-family: Arial, sans-serif;
+  font-weight: 600;
+}
+
+nav .ulNavbar .liNavbar a {
+    position: absolute;
+  color: var(--color-black);
+  cursor: pointer;
+  z-index: 9999;
+  text-decoration: none;
+}
+
+nav .iconss {
+  /* border: 2px solid red; */
+  width: 100%;
+  padding: 1rem;
+  position: absolute;
+  top: 0;
+  height: 80px;
+  text-align: right;
+  display: flex;
+  justify-content: right;
+}
+
+nav .icon {
+  text-decoration: none;
+  color: var(--color-black);
+  margin-right: 30px;
+}
+
+
+nav .iconSosmed {
+    /* border: 2px solid red; */
+    width: 190px;
+    margin-left: 10px;
+    text-align: left;
+}
+
+nav a #iconX {
+    text-decoration: none;
+    color: var(--color-black);
+    padding: 0;
+    position: absolute;
+    top: 19px;
+    right: -20px;
+    /* border: 2px solid black; */
+}
+
+
+#hamburger-menu{
+    color: var(--color-black);
+    display: none;
+}
+
+.iconss .iconSosmed{
+    color: #fff;
+    font-style: none;
+    display: inline-block;
+    font-size: 1.4rem;
+    margin: 0 1rem;
+    font-style: none;
+
+}
+
+.iconss .iconSosmed a {
+    color: #fff;
+    margin: 0 0.5rem;
+  }
+
+  .iconss .iconSosmed a:hover {
+    color: var(--primary);
+  }
+
+
+/* STYLE BAGIAN HEADER or NAV */
+
+/* INI BAGIAN CONTENT */
+
+.content {
+  /* border: 2px solid red; */
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-gray);
+  font-family: var(--Font-primary);
+  font-weight: var(--Font-weight);
+  font-size: 1.5rem;
+  margin-top: 60px;
+  position: relative;
+}
+
+.img-bg .content::before {
+  content: "";
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+  background-image: url("bg.png");
+  height: 300px;
+}
+
+/* INI BAGIAN CONTENT */
+
+/* STYLE BAGIAN FOOTER */
+
+footer {
+  min-height: 60px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: var(--color-gray);
+  line-height: 60px;
+}
+
+footer h1 {
+  font-family: var(--Font-primary);
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* STYLE BAGIAN FOOTER */
+
+
+
+/* MEDIA SCREEN  */
+
+/* INI UNTUK LAPTOP DAN SEJENISNYA */
+@media screen and (max-width:1440px) {
+    nav{
+        width: 100%;    
+    }
+}
+
+@media screen and (max-width:760px) {
+    nav{
+        width: 100%;    
+    }
+    
+    #hamburger-menu{
+        display: inline-block;
+    }
+
+    nav .ul-navbar{
+        color: var(--bg);
+        display: block;
+        margin: 1.5rem;
+        padding: 8px;
+        font-size: 2rem;
+      }
+
+    nav .ul-navbar {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: #fff;
+        width: 30rem;
+        height: 100vh;
+        transition: 0.3s;
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        -ms-transition: 0.3s;
+        -o-transition: 0.3s;
+      }
+      
+    nav .ulNavbar.active{
+        right: 0;
+    }
+}
+
+@media screen and (max-width:440px) {
+    nav{
+        width: 100%;    
+    }
+
+}
